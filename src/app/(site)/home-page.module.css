@@ -1,0 +1,366 @@
+.duotone {
+  --banga-black: #000000;
+  --banga-white: #ffffff;
+  --banga-teal: #6ec7ce;
+  background: var(--banga-black);
+}
+
+.whiteSurface {
+  position: relative;
+  background: var(--banga-white);
+  color: var(--banga-black);
+}
+
+.tealSurface {
+  background: var(--banga-teal);
+  color: var(--banga-black);
+}
+
+.blackSurface {
+  background: var(--banga-black);
+  color: var(--banga-teal);
+}
+
+.whiteSurface :global(.text-ink),
+.whiteSurface :global(.text-grey),
+.whiteSurface :global(.text-deep),
+.whiteSurface :global(.text-teal),
+.whiteSurface :global(.text-cta),
+.tealSurface :global(.text-ink),
+.tealSurface :global(.text-grey),
+.tealSurface :global(.text-deep),
+.tealSurface :global(.text-teal),
+.tealSurface :global(.text-cta) {
+  color: var(--banga-black) !important;
+}
+
+.blackSurface :global(.text-ink),
+.blackSurface :global(.text-grey),
+.blackSurface :global(.text-deep),
+.blackSurface :global(.text-teal),
+.blackSurface :global(.text-cta),
+.blackSurface :global(.text-white),
+.blackSurface :global(.text-cream) {
+  color: var(--banga-teal) !important;
+}
+
+.whiteSurface :global(.bg-white),
+.whiteSurface :global(.bg-cream),
+.whiteSurface :global(.bg-mint),
+.tealSurface :global(.bg-white),
+.tealSurface :global(.bg-cream),
+.tealSurface :global(.bg-mint),
+.blackSurface :global(.bg-white),
+.blackSurface :global(.bg-cream),
+.blackSurface :global(.bg-mint) {
+  background-color: var(--banga-white) !important;
+}
+
+.whiteSurface :global(.bg-yellow),
+.whiteSurface :global(.bg-teal),
+.whiteSurface :global(.bg-cta),
+.tealSurface :global(.bg-yellow),
+.tealSurface :global(.bg-teal),
+.tealSurface :global(.bg-cta),
+.blackSurface :global(.bg-yellow),
+.blackSurface :global(.bg-teal),
+.blackSurface :global(.bg-cta) {
+  background-color: var(--banga-teal) !important;
+}
+
+.whiteSurface :global(.bg-ink),
+.whiteSurface :global(.bg-deep),
+.tealSurface :global(.bg-ink),
+.tealSurface :global(.bg-deep),
+.blackSurface :global(.bg-ink),
+.blackSurface :global(.bg-deep) {
+  background-color: var(--banga-black) !important;
+  color: var(--banga-teal) !important;
+}
+
+.blackSurface :global(.bg-white) :global(.text-ink),
+.blackSurface :global(.bg-white) :global(.text-grey),
+.blackSurface :global(.bg-white) :global(.text-deep),
+.blackSurface :global(.bg-white) :global(.text-teal),
+.blackSurface :global(.bg-white) :global(.text-cta),
+.tealSurface :global(.bg-white) :global(.text-ink),
+.tealSurface :global(.bg-white) :global(.text-grey),
+.tealSurface :global(.bg-white) :global(.text-deep),
+.tealSurface :global(.bg-white) :global(.text-teal),
+.tealSurface :global(.bg-white) :global(.text-cta) {
+  color: var(--banga-black) !important;
+}
+
+.whiteSurface *,
+.whiteSurface *::before,
+.whiteSurface *::after,
+.tealSurface *,
+.tealSurface *::before,
+.tealSurface *::after {
+  border-color: var(--banga-black);
+}
+
+.blackSurface *,
+.blackSurface *::before,
+.blackSurface *::after {
+  border-color: rgba(110, 199, 206, 0.42);
+}
+
+.buttonOnWhite,
+.whiteSurface .buttonOnWhite,
+.tealSurface .buttonOnTeal {
+  border-color: var(--banga-black) !important;
+  background: var(--banga-black) !important;
+  color: var(--banga-teal) !important;
+  box-shadow: 4px 4px 0 var(--banga-teal);
+}
+
+.buttonOnWhite:hover,
+.whiteSurface .buttonOnWhite:hover,
+.tealSurface .buttonOnTeal:hover {
+  background: var(--banga-teal) !important;
+  color: var(--banga-black) !important;
+  box-shadow: 0 0 0 var(--banga-teal);
+  transform: translate(3px, 3px);
+}
+
+.buttonOnTeal {
+  border-color: var(--banga-black) !important;
+  background: var(--banga-black) !important;
+  color: var(--banga-teal) !important;
+}
+
+.buttonOnBlack,
+.blackSurface .buttonOnBlack {
+  border-color: var(--banga-teal) !important;
+  background: var(--banga-teal) !important;
+  color: var(--banga-black) !important;
+}
+
+.buttonOnBlack:hover,
+.blackSurface .buttonOnBlack:hover {
+  background: var(--banga-black) !important;
+  color: var(--banga-teal) !important;
+}
+
+.storySection {
+  overflow: hidden;
+}
+
+.storySection::before {
+  position: absolute;
+  top: 0;
+  right: clamp(18px, 8vw, 120px);
+  width: clamp(70px, 8vw, 128px);
+  height: 12px;
+  background: var(--banga-teal);
+  content: "";
+}
+
+.storyVisual {
+  margin-right: 14px;
+  border: 2px solid var(--banga-black);
+  background: var(--banga-black);
+  padding: 9px;
+  box-shadow: 14px 14px 0 var(--banga-teal);
+}
+
+.visualIndex {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  left: 24px;
+  border: 1px solid var(--banga-black);
+  background: var(--banga-white);
+  padding: 8px 12px;
+  color: var(--banga-black);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.momentsSection {
+  border-top: 1px solid var(--banga-black);
+}
+
+.momentsSection::after {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: min(22vw, 320px);
+  background: var(--banga-teal);
+  content: "";
+}
+
+.momentsSection > :global(.container-page) {
+  position: relative;
+  z-index: 1;
+}
+
+.momentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(185px, 1fr);
+  gap: 8px;
+  border: 2px solid var(--banga-black);
+  background: var(--banga-black);
+  padding: 8px;
+  box-shadow: 14px 14px 0 var(--banga-teal);
+}
+
+.momentCard {
+  position: relative;
+  min-height: 185px;
+  overflow: hidden;
+  background: var(--banga-white);
+}
+
+.momentCard:nth-child(1),
+.momentCard:nth-child(4) {
+  min-height: 230px;
+}
+
+.momentNumber {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--banga-teal);
+  color: var(--banga-black);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.momentLabel {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  border: 1px solid var(--banga-teal);
+  background: var(--banga-black);
+  padding: 9px 11px;
+  color: var(--banga-teal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.productSection {
+  border-top: 1px solid var(--banga-teal);
+  border-bottom: 1px solid var(--banga-teal);
+}
+
+.productGrid > :global(a) {
+  border-color: var(--banga-teal) !important;
+  background: var(--banga-white) !important;
+  box-shadow: 0 6px 0 var(--banga-teal);
+  color: var(--banga-black) !important;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.productGrid > :global(a:hover) {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 var(--banga-teal);
+}
+
+.productGrid > :global(a) :global(.text-ink),
+.productGrid > :global(a) :global(.text-grey),
+.productGrid > :global(a) :global(.text-deep),
+.productGrid > :global(a) :global(.text-teal),
+.productGrid > :global(a) :global(.text-cta) {
+  color: var(--banga-black) !important;
+}
+
+.productGrid > :global(a) :global(button) {
+  border: 1px solid var(--banga-black) !important;
+  background: var(--banga-black) !important;
+  color: var(--banga-teal) !important;
+}
+
+.branchGrid :global(article) {
+  border: 2px solid var(--banga-black) !important;
+  background: var(--banga-white) !important;
+  box-shadow: 8px 8px 0 var(--banga-black);
+  color: var(--banga-black) !important;
+}
+
+.branchGrid :global(article) :global(.text-ink),
+.branchGrid :global(article) :global(.text-grey),
+.branchGrid :global(article) :global(.text-deep),
+.branchGrid :global(article) :global(.text-teal),
+.branchGrid :global(article) :global(.text-cta) {
+  color: var(--banga-black) !important;
+}
+
+.branchGrid :global(article) :global(.bg-ink),
+.branchGrid :global(article) :global(.bg-deep) {
+  background: var(--banga-black) !important;
+  color: var(--banga-teal) !important;
+}
+
+.branchGrid :global(article) :global(.bg-white) {
+  background: var(--banga-white) !important;
+  color: var(--banga-black) !important;
+}
+
+.tealSurface :global(.grain-layer),
+.blackSurface :global(.grain-layer) {
+  opacity: 0.08;
+  filter: grayscale(1);
+}
+
+.photoBoothScene :global([role="img"]) {
+  background: var(--banga-teal) !important;
+  color: var(--banga-black) !important;
+  box-shadow: 0 0 0 1px var(--banga-black);
+}
+
+.photoBoothScene :global([role="img"]) > div {
+  background: var(--banga-teal) !important;
+}
+
+.photoBoothScene :global([role="img"]) svg circle,
+.photoBoothScene :global([role="img"]) svg path {
+  fill: var(--banga-black) !important;
+}
+
+.photoBoothScene :global([role="img"]) p {
+  color: var(--banga-black) !important;
+}
+
+@media (max-width: 767px) {
+  .storyVisual,
+  .momentsGrid {
+    margin-right: 8px;
+    box-shadow: 8px 8px 0 var(--banga-teal);
+  }
+
+  .momentsSection::after {
+    display: none;
+  }
+
+  .momentsGrid {
+    grid-auto-rows: 150px;
+  }
+
+  .momentCard,
+  .momentCard:nth-child(1),
+  .momentCard:nth-child(4) {
+    min-height: 150px;
+  }
+
+  .productGrid > :global(a) {
+    box-shadow: 0 4px 0 var(--banga-teal);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .productGrid > :global(a),
+  .buttonOnWhite {
+    transition: none;
+  }
+}
