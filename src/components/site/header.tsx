@@ -5,17 +5,16 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/format";
 import { useStore } from "@/lib/store";
+import { SITE_CONTENT } from "@/lib/site-content";
 import { Icon } from "@/components/ui/icons";
 import { ButtonLink } from "@/components/ui/primitives";
 import { BranchChip } from "./branch-switcher";
 
-const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/story", label: "Our Story" },
-  { href: "/menu", label: "Menu" },
+const PRIMARY_NAV = SITE_CONTENT.navigation;
+const DRAWER_NAV = [
+  ...PRIMARY_NAV,
   { href: "/promotions", label: "Promotions" },
   { href: "/photo-booth", label: "Photo Booth" },
-  { href: "/locations", label: "Locations" },
   { href: "/track", label: "Track Order" },
 ];
 
@@ -90,19 +89,16 @@ export function SiteHeader() {
         </div>
       )}
 
-      <header
-        className={cn(
-          "sticky top-0 z-40 border-b transition-colors",
-          isHome
-            ? scrolled
-              ? "border-[#feb513]/35 bg-black/95 backdrop-blur-sm"
-              : "border-transparent bg-black"
-            : scrolled
-              ? "border-line bg-cream/95 backdrop-blur-sm"
-              : "border-transparent bg-cream",
-        )}
-      >
-        <div className="container-page flex h-16 items-center gap-3 lg:h-18">
+      <header className="sticky top-0 z-40 bg-transparent px-3 py-3 transition-all sm:px-5">
+        <div
+          className={cn(
+            "container-page flex h-14 items-center gap-2 rounded-full border px-3 shadow-[0_12px_35px_rgba(0,0,0,0.08)] transition-all lg:h-16 lg:px-5",
+            isHome
+              ? "border-[#feb513]/30 bg-black/96 text-[#feb513] backdrop-blur-xl"
+              : "border-black/10 bg-white/94 text-ink backdrop-blur-xl",
+            scrolled && "shadow-[0_16px_42px_rgba(0,0,0,0.14)]",
+          )}
+        >
           <button
             onClick={() => setDrawer(true)}
             aria-label="Open menu"
@@ -117,8 +113,8 @@ export function SiteHeader() {
 
           <Logo duotone={isHome} />
 
-          <nav aria-label="Main" className="ml-6 hidden flex-1 items-center gap-1 lg:flex">
-            {NAV.map((item) => {
+          <nav aria-label="Main" className="ml-5 hidden flex-1 items-center justify-center gap-1 lg:flex">
+            {PRIMARY_NAV.map((item) => {
               const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
               return (
                 <Link
@@ -126,14 +122,14 @@ export function SiteHeader() {
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   className={cn(
-                    "rounded-full px-3 py-2 text-[14px] font-medium transition-colors",
+                    "rounded-full px-4 py-2 text-[13px] font-semibold transition-colors",
                     isHome
                       ? active
                         ? "bg-[#feb513] text-black"
-                        : "text-[#feb513] hover:bg-[#feb513] hover:text-black"
+                        : "text-white/76 hover:bg-white/10 hover:text-white"
                       : active
                         ? "bg-ink text-white"
-                        : "text-ink hover:bg-mint",
+                        : "text-ink/70 hover:bg-black/5 hover:text-ink",
                   )}
                 >
                   {item.label}
@@ -143,7 +139,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="ml-auto flex items-center gap-2">
-            <div className="hidden md:block">
+            <div className="hidden xl:block">
               <BranchChip
                 className={isHome ? "!border-[#feb513] !bg-black !text-[#feb513]" : undefined}
               />
@@ -218,7 +214,7 @@ export function SiteHeader() {
               />
             </div>
             <nav aria-label="Mobile" className="flex flex-col">
-              {NAV.map((item) => (
+              {DRAWER_NAV.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

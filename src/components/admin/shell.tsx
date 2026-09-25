@@ -52,6 +52,7 @@ export const ADMIN_NAV: { group: string; items: AdminNavItem[] }[] = [
   {
     group: "Marketing",
     items: [
+      { href: "/admin/website-content", label: "Website content", icon: "camera" },
       { href: "/admin/promotions", label: "Promotions", icon: "tag" },
       { href: "/admin/customers", label: "Customers", icon: "users" },
     ],
