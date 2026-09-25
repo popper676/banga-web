@@ -7,23 +7,23 @@
  */
 
 export const color = {
-  teal: "#6EC7CE",
+  teal: "#FEB513",
   deep: "#000000",
   ink: "#000000",
   cream: "#FFFFFF",
-  coral: "#6EC7CE",
+  coral: "#F2B326",
   cta: "#000000",
-  ctaDark: "#6EC7CE",
-  yellow: "#6EC7CE",
+  ctaDark: "#F2B326",
+  yellow: "#FEB513",
   mint: "#FFFFFF",
   white: "#FFFFFF",
   grey: "#000000",
   line: "#000000",
-  lineDark: "#6EC7CE",
+  lineDark: "#FEB513",
 } as const;
 
 export const colorRoles = [
-  { name: "Brand teal", token: "teal", hex: color.teal, use: "Brand fills, highlights and primary actions", on: color.ink },
+  { name: "Brand yellow", token: "teal", hex: color.teal, use: "Brand fills, highlights and primary actions", on: color.ink },
   { name: "Black", token: "ink", hex: color.ink, use: "Text, dark surfaces and strong actions", on: color.white },
   { name: "White", token: "white", hex: color.white, use: "Page backgrounds, cards and reversed text", on: color.ink },
 ] as const;
@@ -32,7 +32,7 @@ export const colorRoles = [
 export const colorDistribution = [
   { label: "White", pct: 55, hex: color.white },
   { label: "Black", pct: 30, hex: color.ink },
-  { label: "Brand teal", pct: 15, hex: color.teal },
+  { label: "Brand yellow", pct: 15, hex: color.teal },
 ] as const;
 
 export const typeScale = [

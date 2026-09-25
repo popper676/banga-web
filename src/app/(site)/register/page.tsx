@@ -7,7 +7,7 @@ import { RegisterForm } from "@/components/site/auth-register-form";
 export const metadata: Metadata = {
   title: "Create an account",
   description:
-    "Create a BANG GA BANG GA account to reorder in two taps, keep your Klang Valley delivery addresses and collect photo booth stamps. UI prototype — no real sign-up.",
+    "Create a BANG GA BANG GA account to reorder quickly, save delivery addresses and view receipts. UI prototype — no real sign-up.",
 };
 
 const PERKS = [
@@ -23,8 +23,8 @@ const PERKS = [
   },
   {
     icon: "camera" as const,
-    title: "Photo booth stamps",
-    body: "Ten visits, one free session. The strips are yours; the stamps live in your account.",
+    title: "Member updates",
+    body: "Keep orders, receipts and future member benefits in one place.",
   },
 ];
 

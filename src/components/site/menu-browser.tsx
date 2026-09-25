@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORIES, PRODUCTS } from "@/lib/mock-data";
@@ -47,7 +46,6 @@ export function MenuBrowser({
 
   const [loading, setLoading] = useState(true);
   const [term, setTerm] = useState(initialQuery ?? "");
-  const [muslimFriendly, setMuslimFriendly] = useState(false);
   const [underTwenty, setUnderTwenty] = useState(false);
   const [popularOnly, setPopularOnly] = useState(false);
   const [spice, setSpice] = useState<SpiceFilter>("any");
@@ -66,7 +64,7 @@ export function MenuBrowser({
     return () => window.clearTimeout(timer);
   }, []);
 
-  const filtersActive = muslimFriendly || underTwenty || popularOnly || spice !== "any";
+  const filtersActive = underTwenty || popularOnly || spice !== "any";
   const narrowed = filtersActive || query.length > 0;
 
   const sections: Section[] = useMemo(
@@ -77,13 +75,12 @@ export function MenuBrowser({
           (p) =>
             p.categoryId === category.id &&
             matchesQuery(p, query) &&
-            (!muslimFriendly || p.muslimFriendly) &&
             (!underTwenty || p.price < 2000) &&
             (!popularOnly || p.popular) &&
             matchesSpice(p, spice),
         ),
       })),
-    [query, muslimFriendly, underTwenty, popularOnly, spice],
+    [query, underTwenty, popularOnly, spice],
   );
 
   const visible = narrowed ? sections.filter((s) => s.items.length > 0) : sections;
@@ -130,7 +127,6 @@ export function MenuBrowser({
   };
 
   const clearFilters = () => {
-    setMuslimFriendly(false);
     setUnderTwenty(false);
     setPopularOnly(false);
     setSpice("any");
@@ -149,13 +145,10 @@ export function MenuBrowser({
       <div className="container-page pt-8 lg:pt-12">
         <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-deep">Order now</p>
         <h1 className="mt-2 text-[clamp(34px,5vw,60px)] leading-[1.02]">THE MENU</h1>
-        <p className="mt-3 max-w-[56ch] text-[16px] leading-relaxed text-grey">
-          Boneless Korean chicken, individual sets under RM20 and everything else we make. Prices
-          and availability below are for the branch you are ordering from.
-        </p>
+        <p className="mt-3 text-[16px] text-grey">Pick a branch, choose your food and checkout.</p>
 
         <div className="mt-6 flex flex-col gap-3">
-          <BranchBanner note="Switch branch any time — your cart is checked against it." />
+          <BranchBanner note="Prices and stock follow your selected branch." />
           <BranchClosedCallout />
           {sim.offline && (
             <Callout tone="danger" icon="wifiOff" title="You’re offline" role="alert">
@@ -168,10 +161,10 @@ export function MenuBrowser({
         {/* Search + fulfilment */}
         <div className="mt-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
           <form onSubmit={submitSearch} role="search" className="w-full max-w-md">
-            <label htmlFor="menu-search" className="text-[13px] font-semibold text-ink">
+            <label htmlFor="menu-search" className="sr-only">
               Search the menu
             </label>
-            <div className="mt-1.5 flex gap-2">
+            <div className="flex gap-2">
               <div className="relative flex-1">
                 <span
                   className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-grey"
@@ -196,13 +189,6 @@ export function MenuBrowser({
                 <Icon name="arrowRight" size={16} />
               </button>
             </div>
-            <p className="mt-1.5 text-[12px] text-grey">
-              Opens{" "}
-              <Link href="/search" className="font-semibold text-deep underline underline-offset-2">
-                search and filters
-              </Link>{" "}
-              with price, spice and availability options.
-            </p>
           </form>
 
           <div className="shrink-0">
@@ -220,9 +206,6 @@ export function MenuBrowser({
 
         {/* Filter chips */}
         <div className="mt-4 flex flex-wrap items-center gap-2">
-          <Chip active={muslimFriendly} icon="shield" onClick={() => setMuslimFriendly((v) => !v)}>
-            Muslim-friendly
-          </Chip>
           <Chip active={underTwenty} icon="tag" onClick={() => setUnderTwenty((v) => !v)}>
             Under RM20
           </Chip>
@@ -312,8 +295,8 @@ export function MenuBrowser({
               );
             })}
           </ul>
-          <p className="mt-4 border-t border-line pt-4 text-[12px] leading-relaxed text-grey">
-            Everything on this menu is prepared in a Muslim-friendly kitchen.
+          <p className="mt-4 border-t border-line pt-4 text-[12px] text-grey">
+            Muslim-friendly kitchen
           </p>
         </nav>
 
@@ -371,8 +354,6 @@ export function MenuBrowser({
                       {items.length} item{items.length === 1 ? "" : "s"}
                     </p>
                   </div>
-                  <p className="mt-1 text-[14px] text-grey">{category.blurb}</p>
-
                   {items.length === 0 ? (
                     <div className="mt-4">
                       <EmptyState
@@ -415,7 +396,7 @@ export function MenuBrowser({
             <h2 id="cart-rail-title" className="text-[17px]">
               Your order
             </h2>
-            <p className="mt-1 text-[13px] text-grey">Collected at checkout, never before.</p>
+            <p className="mt-1 text-[13px] text-grey">Review before checkout.</p>
 
             <div
               className="mt-4 flex items-baseline justify-between gap-3 border-t border-line pt-4"

@@ -365,7 +365,7 @@ export function OpsDashboard() {
               caption="Paid orders per hour today, split by branch. Source: prototype mock data."
               series={[
                 { name: "SS15", color: "#000000" },
-                { name: "Taylor's Lakeside", color: "#6EC7CE" },
+                { name: "Taylor's Lakeside", color: "#FEB513" },
               ]}
               data={DASHBOARD.ordersByHour.map((h) => ({
                 label: h.hour,

@@ -410,7 +410,7 @@ export function MotionSection() {
               <div
                 data-depth="0.2"
                 aria-hidden
-                className="absolute inset-0 opacity-45 [background:radial-gradient(circle_at_30%_35%,#6EC7CE_0,transparent_55%),radial-gradient(circle_at_75%_70%,#000000_0,transparent_50%)]"
+                className="absolute inset-0 opacity-45 [background:radial-gradient(circle_at_30%_35%,#FEB513_0,transparent_55%),radial-gradient(circle_at_75%_70%,#000000_0,transparent_50%)]"
               />
               <div data-depth="0.5" className="absolute inset-0 flex items-center justify-center">
                 <FoodImage

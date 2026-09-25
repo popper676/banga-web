@@ -100,7 +100,7 @@ Target: WCAG 2.2 Level AA across web, admin and mobile.
 
 - Body text ≥ 4.5:1, large text (≥24px or ≥19px bold) ≥ 3:1, UI components and
   focus indicators ≥ 3:1.
-- Never small white text on `#6EC7CE`; use `#102A2E`. White text only on
+- Never small white text on `#FEB513`; use `#102A2E`. White text only on
   `#1D5960` and `#102A2E`.
 - Status is never colour alone. Every status pairs a colour with an icon **and**
   a text label — this is checked in review, and the design system makes the

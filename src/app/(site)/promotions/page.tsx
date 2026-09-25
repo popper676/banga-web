@@ -9,7 +9,7 @@ import { PromoCard } from "@/components/site/story-promo-card";
 export const metadata: Metadata = {
   title: "Promotions",
   description:
-    "Student Wednesdays, the weekday Lunch Rush, weekend free delivery and RM1 photo booth sessions. Current offers at BANG GA BANG GA.",
+    "Student Wednesdays, weekday lunch offers and weekend delivery deals at BANG GA BANG GA.",
 };
 
 /**
@@ -71,8 +71,7 @@ export default function PromotionsPage() {
             GOOD FOOD, BETTER VALUE.
           </h1>
           <p className="mt-5 max-w-[52ch] text-[17px] leading-relaxed text-ink/80 lg:text-[19px]">
-            Every set is already under RM20. These are the days it costs even less — student
-            Wednesdays, the weekday lunch rush, and a photo booth session for a ringgit.
+            Everyday-value sets, student offers, weekday lunch deals and selected delivery rewards.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <ButtonLink href="/menu" size="lg" iconEnd="arrowRight">

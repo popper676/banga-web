@@ -17,7 +17,7 @@ and by a native theme provider (mobile). One source, three outputs.
 
 ```ts
 export const color = {
-  brand:   { primary: "#6EC7CE", deepTeal: "#1D5960" },
+  brand:   { primary: "#FEB513", deepTeal: "#1D5960" },
   ink:     "#102A2E",
   cream:   "#FFF7E8",
   coral:   { soft: "#CE756E", cta: "#B9433B" },
@@ -27,7 +27,7 @@ export const color = {
   grey:    "#66777A",
   status: {
     success: "#1D5960", warning: "#F4C95D",
-    danger:  "#B9433B", info:    "#6EC7CE", neutral: "#66777A",
+    danger:  "#B9433B", info:    "#FEB513", neutral: "#66777A",
   },
 } as const;
 

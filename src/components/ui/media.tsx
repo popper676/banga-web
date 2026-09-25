@@ -13,8 +13,8 @@ import { Icon } from "./icons";
 export const AVAILABLE_ASSETS = new Set<string>();
 
 const PALETTES = [
-  { bg: "#FFFFFF", shape: "#6EC7CE", accent: "#000000" },
-  { bg: "#6EC7CE", shape: "#FFFFFF", accent: "#000000" },
+  { bg: "#FFFFFF", shape: "#FEB513", accent: "#000000" },
+  { bg: "#FEB513", shape: "#FFFFFF", accent: "#000000" },
 ];
 
 function hash(s: string): number {
@@ -142,10 +142,10 @@ export function PhotoStrip({
         <div
           key={i}
           className="aspect-[4/3] rounded-[4px]"
-          style={{ background: ["#6EC7CE", "#FFFFFF", "#6EC7CE", "#FFFFFF"][i % 4] }}
+          style={{ background: ["#FEB513", "#FFFFFF", "#FEB513", "#FFFFFF"][i % 4] }}
         >
           <svg viewBox="0 0 40 30" className="size-full">
-            <circle cx="20" cy="13" r="6" fill="#6EC7CE" opacity="0.8" />
+            <circle cx="20" cy="13" r="6" fill="#FEB513" opacity="0.8" />
             <path d="M6 30c0-7 6-10 14-10s14 3 14 10z" fill="#000000" opacity="0.55" />
           </svg>
         </div>
@@ -172,7 +172,7 @@ export function MapView({
   pins?: { x: number; y: number; tone: "branch" | "rider" | "customer"; name: string }[];
   route?: boolean;
 }) {
-  const toneColor = { branch: "#000000", rider: "#6EC7CE", customer: "#000000" };
+  const toneColor = { branch: "#000000", rider: "#FEB513", customer: "#000000" };
   return (
     <div
       role="img"
@@ -185,18 +185,18 @@ export function MapView({
         <g stroke="#FFFFFF" strokeWidth="10" strokeLinecap="round">
           <path d="M-10 70H410M-10 170H410M90 -10V270M250 -10V270" />
         </g>
-        <g stroke="#6EC7CE" strokeWidth="3">
+        <g stroke="#FEB513" strokeWidth="3">
           <path d="M-10 120H410M170 -10V270M330 -10V270" />
         </g>
         {/* Blocks */}
-        <g fill="#6EC7CE" opacity="0.35">
+        <g fill="#FEB513" opacity="0.35">
           <rect x="105" y="15" width="50" height="40" rx="4" />
           <rect x="190" y="85" width="45" height="30" rx="4" />
           <rect x="270" y="185" width="45" height="45" rx="4" />
           <rect x="15" y="185" width="60" height="40" rx="4" />
         </g>
         {/* Water */}
-        <path d="M340 0c25 40 10 90 30 130v130h30V0z" fill="#6EC7CE" />
+        <path d="M340 0c25 40 10 90 30 130v130h30V0z" fill="#FEB513" />
         {route && (
           <path
             d="M100 190 C 150 190, 160 120, 210 110 S 290 90, 320 60"
@@ -271,7 +271,7 @@ export function QRCode({ seed, size = 240, dimmed }: { seed: string; size?: numb
           <g key={`${r}-${c}`}>
             <rect x={c} y={r} width="7" height="7" fill="#000000" rx="1.4" />
             <rect x={c + 1} y={r + 1} width="5" height="5" fill="#fff" rx="1" />
-            <rect x={c + 2} y={r + 2} width="3" height="3" fill="#6EC7CE" rx="0.6" />
+            <rect x={c + 2} y={r + 2} width="3" height="3" fill="#FEB513" rx="0.6" />
           </g>
         ))}
       </svg>

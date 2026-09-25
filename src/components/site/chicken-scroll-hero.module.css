@@ -3,7 +3,7 @@
   position: relative;
   height: 255svh;
   background: #000;
-  color: #6ec7ce;
+  color: #feb513;
 }
 
 .stickyFrame {
@@ -49,10 +49,10 @@
   opacity: 0.98;
   background-color: transparent;
   background-image:
-    linear-gradient(45deg, #6ec7ce 25%, transparent 25%),
-    linear-gradient(-45deg, #6ec7ce 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #6ec7ce 75%),
-    linear-gradient(-45deg, transparent 75%, #6ec7ce 75%);
+    linear-gradient(45deg, #feb513 25%, transparent 25%),
+    linear-gradient(-45deg, #feb513 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #feb513 75%),
+    linear-gradient(-45deg, transparent 75%, #feb513 75%);
   background-position: 0 0, 0 21px, 21px -21px, -21px 0;
   background-size: 42px 42px;
 }
@@ -100,7 +100,7 @@
 .eyebrow span {
   display: inline-flex;
   border-radius: 999px;
-  background: #6ec7ce;
+  background: #feb513;
   padding: 7px 11px;
   color: #000;
   font-size: 13px;
@@ -110,7 +110,7 @@
 .title {
   margin: 0;
   max-width: 7ch;
-  color: #6ec7ce;
+  color: #feb513;
   font-size: clamp(68px, 10.6vw, 164px);
   font-weight: 800;
   line-height: 0.78;
@@ -122,7 +122,7 @@
 
 .title span {
   color: transparent;
-  -webkit-text-stroke: 2px #6ec7ce;
+  -webkit-text-stroke: 2px #feb513;
 }
 
 .lead {
@@ -147,7 +147,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border: 1px solid #6ec7ce;
+  border: 1px solid #feb513;
   border-radius: 999px;
   padding: 0 22px;
   font-size: 14px;
@@ -156,13 +156,13 @@
 }
 
 .primaryAction {
-  background: #6ec7ce;
+  background: #feb513;
   color: #000;
 }
 
 .secondaryAction {
   border-color: rgba(110, 199, 206, 0.55);
-  color: #6ec7ce;
+  color: #feb513;
 }
 
 .primaryAction:hover,
@@ -171,8 +171,8 @@
 }
 
 .secondaryAction:hover {
-  border-color: #6ec7ce;
-  background: #6ec7ce;
+  border-color: #feb513;
+  background: #feb513;
   color: #000;
 }
 
@@ -193,7 +193,7 @@
 .proof li::before {
   content: "✦";
   margin-right: 8px;
-  color: #6ec7ce;
+  color: #feb513;
 }
 
 .flavourTag {
@@ -204,7 +204,7 @@
   grid-template-columns: auto auto;
   gap: 10px;
   align-items: start;
-  color: #6ec7ce;
+  color: #feb513;
   opacity: calc(0.55 + var(--hero-progress) * 0.45);
   transform: translateY(calc(var(--hero-progress) * -24px))
     rotate(calc(var(--hero-progress) * -2deg));
@@ -212,7 +212,7 @@
 }
 
 .flavourTag span {
-  color: #6ec7ce;
+  color: #feb513;
   font-size: 12px;
   font-weight: 800;
 }
@@ -268,7 +268,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: #6ec7ce;
+  background: #feb513;
   transform: scaleX(var(--hero-progress));
   transform-origin: left;
 }
@@ -280,7 +280,7 @@
 .scrollScene[data-phase="drop"] [data-step="drop"],
 .scrollScene[data-phase="stack"] [data-step="stack"],
 .scrollScene[data-phase="serve"] [data-step="serve"] {
-  color: #6ec7ce;
+  color: #feb513;
 }
 
 @media (max-width: 900px) {

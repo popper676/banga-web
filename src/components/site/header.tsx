@@ -34,7 +34,7 @@ export function Logo({
       className={cn(
         "flex items-center gap-2 font-display font-extrabold leading-none tracking-tight",
         size === "sm" ? "text-[15px]" : "text-[17px]",
-        duotone ? "text-[#6ec7ce]" : onDark ? "text-white" : "text-ink",
+        duotone ? "text-[#feb513]" : onDark ? "text-white" : "text-ink",
       )}
       aria-label="BANG GA BANG GA home"
     >
@@ -43,7 +43,7 @@ export function Logo({
           "flex items-center justify-center rounded-[10px] font-display text-[13px] font-extrabold",
           size === "sm" ? "size-7" : "size-8",
           duotone
-            ? "bg-[#6ec7ce] text-black"
+            ? "bg-[#feb513] text-black"
             : onDark
               ? "bg-teal text-ink"
               : "bg-ink text-cream",
@@ -95,7 +95,7 @@ export function SiteHeader() {
           "sticky top-0 z-40 border-b transition-colors",
           isHome
             ? scrolled
-              ? "border-[#6ec7ce]/35 bg-black/95 backdrop-blur-sm"
+              ? "border-[#feb513]/35 bg-black/95 backdrop-blur-sm"
               : "border-transparent bg-black"
             : scrolled
               ? "border-line bg-cream/95 backdrop-blur-sm"
@@ -109,7 +109,7 @@ export function SiteHeader() {
             aria-expanded={drawer}
             className={cn(
               "flex size-10 items-center justify-center rounded-full lg:hidden",
-              isHome ? "text-[#6ec7ce] hover:bg-[#6ec7ce] hover:text-black" : "text-ink hover:bg-mint",
+              isHome ? "text-[#feb513] hover:bg-[#feb513] hover:text-black" : "text-ink hover:bg-mint",
             )}
           >
             <Icon name="menu" size={20} />
@@ -129,8 +129,8 @@ export function SiteHeader() {
                     "rounded-full px-3 py-2 text-[14px] font-medium transition-colors",
                     isHome
                       ? active
-                        ? "bg-[#6ec7ce] text-black"
-                        : "text-[#6ec7ce] hover:bg-[#6ec7ce] hover:text-black"
+                        ? "bg-[#feb513] text-black"
+                        : "text-[#feb513] hover:bg-[#feb513] hover:text-black"
                       : active
                         ? "bg-ink text-white"
                         : "text-ink hover:bg-mint",
@@ -145,7 +145,7 @@ export function SiteHeader() {
           <div className="ml-auto flex items-center gap-2">
             <div className="hidden md:block">
               <BranchChip
-                className={isHome ? "!border-[#6ec7ce] !bg-black !text-[#6ec7ce]" : undefined}
+                className={isHome ? "!border-[#feb513] !bg-black !text-[#feb513]" : undefined}
               />
             </div>
             <Link
@@ -154,7 +154,7 @@ export function SiteHeader() {
               className={cn(
                 "hidden size-10 items-center justify-center rounded-full border sm:flex",
                 isHome
-                  ? "border-[#6ec7ce] bg-black text-[#6ec7ce] hover:bg-[#6ec7ce] hover:text-black"
+                  ? "border-[#feb513] bg-black text-[#feb513] hover:bg-[#feb513] hover:text-black"
                   : "border-line bg-white text-ink hover:border-ink",
               )}
             >
@@ -165,7 +165,7 @@ export function SiteHeader() {
               className={cn(
                 "relative flex h-10 items-center gap-2 rounded-full border px-3",
                 isHome
-                  ? "border-[#6ec7ce] bg-black text-[#6ec7ce] hover:bg-[#6ec7ce] hover:text-black"
+                  ? "border-[#feb513] bg-black text-[#feb513] hover:bg-[#feb513] hover:text-black"
                   : "border-line bg-white text-ink hover:border-ink",
               )}
               aria-label={`Cart, ${cartCount} item${cartCount === 1 ? "" : "s"}`}
@@ -178,7 +178,7 @@ export function SiteHeader() {
               size="md"
               className={cn(
                 "hidden sm:inline-flex",
-                isHome && "!border-[#6ec7ce] !bg-[#6ec7ce] !text-black hover:!bg-black hover:!text-[#6ec7ce]",
+                isHome && "!border-[#feb513] !bg-[#feb513] !text-black hover:!bg-black hover:!text-[#feb513]",
               )}
             >
               Order Now
@@ -193,7 +193,7 @@ export function SiteHeader() {
           <div
             className={cn(
               "sheet-up relative h-full w-[86%] max-w-80 overflow-auto p-5",
-              isHome ? "bg-black text-[#6ec7ce]" : "bg-cream",
+              isHome ? "bg-black text-[#feb513]" : "bg-cream",
             )}
           >
             <div className="mb-6 flex items-center justify-between">
@@ -203,7 +203,7 @@ export function SiteHeader() {
                 aria-label="Close menu"
                 className={cn(
                   "flex size-9 items-center justify-center rounded-full",
-                  isHome ? "text-[#6ec7ce] hover:bg-[#6ec7ce] hover:text-black" : "hover:bg-mint",
+                  isHome ? "text-[#feb513] hover:bg-[#feb513] hover:text-black" : "hover:bg-mint",
                 )}
               >
                 <Icon name="cross" size={18} />
@@ -213,7 +213,7 @@ export function SiteHeader() {
               <BranchChip
                 className={cn(
                   "w-full justify-start",
-                  isHome && "!border-[#6ec7ce] !bg-black !text-[#6ec7ce]",
+                  isHome && "!border-[#feb513] !bg-black !text-[#feb513]",
                 )}
               />
             </div>
@@ -224,16 +224,16 @@ export function SiteHeader() {
                   href={item.href}
                   className={cn(
                     "border-b py-3.5 font-display text-[19px] font-bold",
-                    isHome ? "border-[#6ec7ce]/35 text-[#6ec7ce]" : "border-line text-ink",
+                    isHome ? "border-[#feb513]/35 text-[#feb513]" : "border-line text-ink",
                   )}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Link href="/account" className={cn("border-b py-3.5 font-display text-[19px] font-bold", isHome ? "border-[#6ec7ce]/35 text-[#6ec7ce]" : "border-line text-ink")}>
+              <Link href="/account" className={cn("border-b py-3.5 font-display text-[19px] font-bold", isHome ? "border-[#feb513]/35 text-[#feb513]" : "border-line text-ink")}>
                 Account
               </Link>
-              <Link href="/login" className={cn("border-b py-3.5 font-display text-[19px] font-bold", isHome ? "border-[#6ec7ce]/35 text-[#6ec7ce]" : "border-line text-ink")}>
+              <Link href="/login" className={cn("border-b py-3.5 font-display text-[19px] font-bold", isHome ? "border-[#feb513]/35 text-[#feb513]" : "border-line text-ink")}>
                 Log in
               </Link>
             </nav>
@@ -242,7 +242,7 @@ export function SiteHeader() {
               full
               className={cn(
                 "mt-6",
-                isHome && "!border-[#6ec7ce] !bg-[#6ec7ce] !text-black",
+                isHome && "!border-[#feb513] !bg-[#feb513] !text-black",
               )}
             >
               Order Now
@@ -271,7 +271,7 @@ export function MobileOrderBar() {
       aria-label="Ordering"
       className={cn(
         "no-print sticky bottom-0 z-30 border-t pb-[env(safe-area-inset-bottom)] lg:hidden",
-        isHome ? "border-[#6ec7ce]/35 bg-black" : "border-line bg-white",
+        isHome ? "border-[#feb513]/35 bg-black" : "border-line bg-white",
       )}
     >
       <ul className="grid grid-cols-5">
@@ -286,8 +286,8 @@ export function MobileOrderBar() {
                   "relative flex min-h-14 flex-col items-center justify-center gap-0.5 text-[11px] font-medium",
                   isHome
                     ? active
-                      ? "text-[#6ec7ce]"
-                      : "text-[#6ec7ce]/55"
+                      ? "text-[#feb513]"
+                      : "text-[#feb513]/55"
                     : active
                       ? "text-ink"
                       : "text-grey",
@@ -299,7 +299,7 @@ export function MobileOrderBar() {
                   <span
                     className={cn(
                       "num absolute right-[22%] top-1.5 rounded-full px-1.5 text-[10px] font-bold",
-                      isHome ? "bg-[#6ec7ce] text-black" : "bg-cta text-white",
+                      isHome ? "bg-[#feb513] text-black" : "bg-cta text-white",
                     )}
                   >
                     {i.badge}

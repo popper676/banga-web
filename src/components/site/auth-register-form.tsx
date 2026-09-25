@@ -190,8 +190,7 @@ export function RegisterForm() {
         </span>
         <h2 className="mt-3 text-[24px]">You&rsquo;re in, {name.trim().split(" ")[0]}</h2>
         <p className="mt-2 max-w-[52ch] text-[15px] leading-relaxed text-ink/80">
-          Your email is verified and you are signed in. Your addresses, receipts and photo booth
-          stamps will collect in one place from now on.
+          Your email is verified. Your addresses, receipts and orders now stay in one place.
         </p>
 
         <ul className="mt-5 flex flex-col gap-2.5 text-[15px] text-ink/85">
@@ -213,7 +212,7 @@ export function RegisterForm() {
             <span className="mt-0.5 shrink-0 text-deep">
               <Icon name="camera" size={17} />
             </span>
-            Photo booth stamps start counting from your first order.
+            Member benefits start with your first completed order.
           </li>
         </ul>
 

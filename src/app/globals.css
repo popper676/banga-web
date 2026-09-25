@@ -7,22 +7,22 @@
 
 @theme {
   /* Brand */
-  --color-teal: #6ec7ce;
+  --color-teal: #feb513;
   --color-deep: #000000;
   --color-ink: #000000;
   --color-cream: #ffffff;
-  --color-coral: #6ec7ce;
+  --color-coral: #f2b326;
   --color-cta: #000000;
-  --color-cta-dark: #6ec7ce;
-  --color-yellow: #6ec7ce;
+  --color-cta-dark: #f2b326;
+  --color-yellow: #feb513;
   --color-mint: #ffffff;
   --color-grey: rgb(0 0 0 / 0.64);
   --color-line: rgb(0 0 0 / 0.18);
-  --color-line-dark: #6ec7ce;
+  --color-line-dark: #feb513;
 
   /* Semantic */
   --color-success: #000000;
-  --color-warning: #6ec7ce;
+  --color-warning: #f2b326;
   --color-danger: #000000;
   --color-info: #000000;
 

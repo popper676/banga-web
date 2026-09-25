@@ -48,22 +48,10 @@ export default function HomePage() {
               overline="Our story"
               title={<span id="story-title">TRADITION &amp; TRENDY</span>}
             />
-            <div className="mt-6 flex flex-col gap-4 text-[17px] leading-relaxed text-ink/80">
-              <p>
-                Welcome to BANG GA BANG GA — where Korean tradition meets a modern, fun dining
-                experience.
-              </p>
-              <p>
-                Inspired by the Korean expression <em>Bang Ga Bang Ga</em>, meaning{" "}
-                <strong className="font-semibold text-ink">&ldquo;Nice to meet you,&rdquo;</strong>{" "}
-                our restaurant was founded by a Korean couple passionate about bringing the flavours
-                they love to Malaysia.
-              </p>
-              <p>
-                For more than three years, we&rsquo;ve been serving Korean favourites with a focus on
-                flavour, quality, value, and good times.
-              </p>
-            </div>
+            <p className="mt-6 max-w-[48ch] text-[17px] leading-relaxed text-ink/80">
+              Korean comfort food made in Malaysia by a Korean couple—bold flavours, boneless
+              chicken and easy everyday prices.
+            </p>
             <ButtonLink href="/story" variant="secondary" className={`${styles.buttonOnWhite} mt-7`} iconEnd="arrowRight">
               Read our story
             </ButtonLink>
@@ -81,7 +69,7 @@ export default function HomePage() {
             <SectionTitle
               overline="What we serve"
               title={<span id="food-title">TRADITION &amp; TRENDY</span>}
-              lead="Our menu brings together Korean-inspired flavours and boneless chicken, paired with sauces and seasonings designed for easy, satisfying eating."
+              lead="Korean flavours, boneless chicken and complete meals made for everyday dining."
             />
           </Reveal>
         </div>
@@ -92,10 +80,10 @@ export default function HomePage() {
           <Reveal delay={1}>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { t: "Korean flavours.", d: "Sauces made in-house every morning, no shortcuts." },
-                { t: "Boneless chicken.", d: "Every piece is boneless. No mess, no fuss." },
-                { t: "Affordable prices.", d: "Individual sets under RM20, every day." },
-                { t: "A modern Korean experience.", d: "Muslim-friendly, and built for everyone." },
+                { t: "Korean flavours.", d: "Sauces made in-house." },
+                { t: "Boneless chicken.", d: "Easy to share and enjoy." },
+                { t: "Everyday value.", d: "Individual sets under RM20." },
+                { t: "Muslim-friendly.", d: "Welcoming to everyone." },
               ].map((item, i) => (
                 <div key={item.t} className="rounded-[16px] border border-deep/15 bg-white p-5">
                   <span className="num font-display text-[13px] font-bold text-teal">
@@ -118,11 +106,6 @@ export default function HomePage() {
               <Badge tone="warning" icon="tag">
                 Individual sets under RM20
               </Badge>
-              <p className="text-[15px] text-ink/75">
-                As a Muslim-friendly Korean restaurant, we make Korean dining approachable and
-                enjoyable for everyone. With individual sets under RM20, great Korean food can be
-                part of your everyday moments.
-              </p>
             </div>
           </Reveal>
         </div>
@@ -138,9 +121,8 @@ export default function HomePage() {
               overline="Everyday moments"
               title={<span id="moments-title">COME HUNGRY. LEAVE SMILING.</span>}
             />
-            <p className="mt-5 max-w-[46ch] text-[17px] leading-relaxed text-ink/80">
-              Whether you&rsquo;re grabbing lunch between classes, catching up with friends, enjoying
-              a casual dinner, or simply craving Korean comfort food —
+            <p className="mt-5 max-w-[40ch] text-[17px] leading-relaxed text-ink/80">
+              Quick lunch, casual dinner or a table full of friends—we&rsquo;re ready.
             </p>
             <ButtonLink href="/menu" className={`${styles.buttonOnWhite} mt-7`} iconEnd="arrowRight">
               Explore Our Menu
@@ -189,7 +171,7 @@ export default function HomePage() {
               <Link
                 key={c.id}
                 href={`/menu?category=${c.slug}`}
-                className="inline-flex h-10 shrink-0 items-center rounded-full border border-[#6ec7ce] px-4 text-[14px] font-semibold text-[#6ec7ce] transition-colors hover:bg-[#6ec7ce] hover:text-black"
+                className="inline-flex h-10 shrink-0 items-center rounded-full border border-[#feb513] px-4 text-[14px] font-semibold text-[#feb513] transition-colors hover:bg-[#feb513] hover:text-black"
               >
                 {c.name}
               </Link>
@@ -214,36 +196,24 @@ export default function HomePage() {
             <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.18em] text-teal">
               Photo booth
             </p>
-            <h2 id="booth-title" className="text-[clamp(32px,5vw,64px)] leading-[1.02] text-[#6ec7ce]">
+            <h2 id="booth-title" className="text-[clamp(32px,5vw,64px)] leading-[1.02] text-[#feb513]">
               MORE THAN A MEAL.
             </h2>
-            <div className="mt-6 flex flex-col gap-4 text-[17px] leading-relaxed text-[#6ec7ce]/80">
-              <p>Good food brings people together.</p>
-              <p>Great moments are worth remembering.</p>
-              <p>
-                That&rsquo;s why BANG GA BANG GA brings Korean dining and photo booth memories
-                together under one roof. After your meal, step into our photo booth with your
-                friends, family, or someone special and capture the moment.
-              </p>
-            </div>
+            <p className="mt-6 max-w-[46ch] text-[17px] leading-relaxed text-[#feb513]/80">
+              Finish your meal with a photo at our in-store booth. Bring your friends, take the
+              strip home and make the visit last.
+            </p>
 
-            <div className="mt-9 border-t border-[#6ec7ce]/35 pt-8">
+            <div className="mt-9 border-t border-[#feb513]/35 pt-8">
               <h3 className="font-display text-[clamp(28px,4vw,44px)] leading-none text-teal">
                 MAKE IT LAST.
               </h3>
-              <p className="mt-4 max-w-[48ch] text-[17px] leading-relaxed text-[#6ec7ce]/80">
-                With photo booth sessions starting from just RM1, you can turn an ordinary meal into
-                a memory you can take home.
-              </p>
-              <p className="mt-4 font-display text-[19px] font-bold text-[#6ec7ce]">
+              <p className="mt-4 font-display text-[19px] font-bold text-[#feb513]">
                 Eat together. Snap together. Make it last.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <ButtonLink href="/photo-booth" className={styles.buttonOnBlack} iconEnd="arrowRight">
-                  See the photo booth
-                </ButtonLink>
-                <ButtonLink href="/menu/photo-booth-session" variant="secondary" className={styles.buttonOnBlack}>
-                  Add a session from RM1
+                <ButtonLink href="/locations" className={styles.buttonOnBlack} iconEnd="arrowRight">
+                  Find a photo booth
                 </ButtonLink>
               </div>
             </div>
@@ -253,8 +223,8 @@ export default function HomePage() {
             <ParallaxScene className={`${styles.photoBoothScene} relative mx-auto flex h-96 w-full max-w-md items-center justify-center`}>
               {/* Curtain */}
               <div className="layer-25d absolute inset-x-8 inset-y-0 rounded-[24px] bg-ink/45" data-depth="0.3" />
-              <div className="layer-25d absolute left-8 top-0 h-full w-10 rounded-l-[24px] bg-[#6ec7ce]/70" data-depth="0.6" aria-hidden />
-              <div className="layer-25d absolute right-8 top-0 h-full w-10 rounded-r-[24px] bg-[#6ec7ce]/70" data-depth="0.6" aria-hidden />
+              <div className="layer-25d absolute left-8 top-0 h-full w-10 rounded-l-[24px] bg-[#feb513]/70" data-depth="0.6" aria-hidden />
+              <div className="layer-25d absolute right-8 top-0 h-full w-10 rounded-r-[24px] bg-[#feb513]/70" data-depth="0.6" aria-hidden />
               <div className="layer-25d relative" data-depth="1.4">
                 <PhotoStrip frames={4} tilt={-6} className="float-slow w-28" />
               </div>
@@ -264,8 +234,8 @@ export default function HomePage() {
               <div className="layer-25d absolute bottom-6 right-0" data-depth="2" aria-hidden>
                 <PhotoStrip frames={3} tilt={-14} className="float-slower w-20" />
               </div>
-              <span className="layer-25d absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-[#6ec7ce] px-4 py-2 text-[13px] font-bold text-black" data-depth="2.6">
-                Sessions from RM1
+              <span className="layer-25d absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-[#feb513] px-4 py-2 text-[13px] font-bold text-black" data-depth="2.6">
+                Available at our outlets
               </span>
             </ParallaxScene>
           </Reveal>
@@ -280,7 +250,7 @@ export default function HomePage() {
           <SectionTitle
             overline="Two locations. One Korean experience."
             title={<span id="find-title">FIND US</span>}
-            lead="Whether you're a student, catching up with friends, spending time with family, or discovering Korean food for the first time, there's always a seat waiting for you."
+            lead="Choose your nearest outlet for dine-in, pickup or delivery."
           />
         </Reveal>
 
@@ -313,13 +283,10 @@ export default function HomePage() {
             <p className="mx-auto mt-5 max-w-[42ch] text-[18px] leading-relaxed text-ink/75">
               Korean flavours. Good food. Great memories.
             </p>
-            <p className="mt-8 font-display text-[clamp(24px,3.5vw,40px)] tracking-tight text-[#6ec7ce]">
+            <p className="mt-8 font-display text-[clamp(24px,3.5vw,40px)] tracking-tight text-[#feb513]">
               MAKE IT LAST.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
-              <ButtonLink href="/menu" size="lg" variant="secondary" className={styles.buttonOnBlack}>
-                Explore Our Menu
-              </ButtonLink>
               <ButtonLink href="/menu" size="lg" variant="dark" className={styles.buttonOnBlack}>
                 Order Now
               </ButtonLink>

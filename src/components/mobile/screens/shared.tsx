@@ -696,7 +696,7 @@ export function CountdownMeter({
       <div className="flex items-center gap-3.5">
         <span className="relative flex size-16 shrink-0 items-center justify-center">
           <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden>
-            <circle cx="32" cy="32" r={r} fill="none" stroke="#6EC7CE" strokeWidth="5" />
+            <circle cx="32" cy="32" r={r} fill="none" stroke="#FEB513" strokeWidth="5" />
             <circle
               cx="32"
               cy="32"

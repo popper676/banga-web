@@ -45,8 +45,8 @@ const LOSE: { icon: IconKey; title: string; body: string }[] = [
   },
   {
     icon: "camera",
-    title: "No photo booth stamps",
-    body: "Stamps collect against an account. Ten visits earn a free session, and guest orders do not count.",
+    title: "No member history",
+    body: "Guest orders are not saved to a member account for future benefits.",
   },
   {
     icon: "bell",

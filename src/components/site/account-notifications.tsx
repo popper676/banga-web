@@ -9,7 +9,7 @@ import { AccountHeader, AccountSignedOut, AccountSkeleton } from "./account-shel
 const HISTORY = [
   { id: "n1", title: "Rider is on the way", body: "Ahmad picked up order BG-260920-0133.", at: "Yesterday, 19:48", unread: false },
   { id: "n2", title: "Student Wednesday is on", body: "10% off signature chicken today with a student ID.", at: "Wednesday", unread: true },
-  { id: "n3", title: "Photo booth from RM1", body: "Add a session when you order a set.", at: "18 Sep", unread: false },
+  { id: "n3", title: "Make it last", body: "The photo booth is available at our outlets.", at: "18 Sep", unread: false },
 ];
 
 export function AccountNotifications() {

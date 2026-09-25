@@ -88,15 +88,15 @@ const FAQS = [
     ),
   },
   {
-    q: "How does the photo booth session work?",
+    q: "Where can I use the photo booth?",
     a: (
       <>
         <p>
-          Add a session to your food order from RM1, then show your receipt at the booth. Sessions
-          are used on the same day at the same branch and cannot be transferred to another visit.
+          The photo booth is an in-store experience at our outlets. Visit the branch and ask our
+          team where the booth is located.
         </p>
         <p className="mt-2">
-          Extra strips are priced per copy, and a card frame is RM4. Read more on the{" "}
+          See photos and outlet information on the{" "}
           <Link href="/photo-booth" className="font-semibold text-deep underline underline-offset-2">
             photo booth page
           </Link>

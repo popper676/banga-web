@@ -282,8 +282,7 @@ function IosHomeFrame({ live }: { live: boolean }) {
           <div className="mt-5 rounded-[14px] bg-mint p-3.5">
             <FieldLabel>Make it last</FieldLabel>
             <p className="mt-1 text-[14px] leading-snug text-ink/85">
-              Add a photo booth session from RM1 with any set or platter and collect the strip at the
-              counter.
+              Visit the photo booth at our outlets after your meal.
             </p>
           </div>
           <p className="mt-4 text-[12px] leading-snug text-grey">
@@ -362,8 +361,7 @@ function AndroidHomeFrame({ live }: { live: boolean }) {
           <div className="mt-5 rounded-[16px] bg-mint p-4">
             <FieldLabel>Make it last</FieldLabel>
             <p className="mt-1 text-[14px] leading-snug text-ink/85">
-              Add a photo booth session from RM1 with any set or platter and collect the strip at the
-              counter.
+              Visit the photo booth at our outlets after your meal.
             </p>
           </div>
           <p className="mt-4 pb-6 text-[12px] leading-snug text-grey">

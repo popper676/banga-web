@@ -80,7 +80,7 @@ nobody wants a joke while a payment is failing.
 
 | Token | Hex | Role |
 |-------|-----|------|
-| `brand.primary` | `#6EC7CE` | Primary brand teal — fills, illustration, large shapes |
+| `brand.primary` | `#FEB513` | Primary brand yellow — fills, illustration, large shapes |
 | `brand.deepTeal` | `#1D5960` | Section blocking, dark surfaces, footer |
 | `ink` | `#102A2E` | Primary text, darkest surface |
 | `cream` | `#FFF7E8` | Default warm page background |
@@ -96,7 +96,7 @@ nobody wants a joke while a payment is failing.
 
 ### Accessibility rules (non-negotiable)
 
-- Never place small white text on `#6EC7CE`. Use `#102A2E` on light teal.
+- Never place small white text on `#FEB513`. Use black text on the yellow surface.
 - Use white text on `#1D5960` and `#102A2E` only.
 - `coral.cta #B9433B` is used with white text at 4.5:1+; `coral.soft #CE756E` is
   decorative and never carries small text.

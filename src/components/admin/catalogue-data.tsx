@@ -22,7 +22,6 @@ export const PRICE_OVERRIDES: Record<string, Record<string, number>> = {
   "p-set-soy": { taylors: 1790 },
   "p-set-yangnyeom": { taylors: 1850 },
   "p-platter-friends": { taylors: 8500 },
-  "p-booth-session": { taylors: 100 },
 };
 
 export function priceAt(product: Product, branchId: string): number {

@@ -89,7 +89,6 @@ export const CATEGORIES: Category[] = [
   { id: "sharing", name: "Sharing Platters", slug: "sharing", blurb: "Built for a table of friends", icon: "platter" },
   { id: "sides", name: "Sides & Snacks", slug: "sides", blurb: "Tteokbokki, kimbap, fries", icon: "side" },
   { id: "drinks", name: "Drinks", slug: "drinks", blurb: "Korean sodas, teas and yuzu", icon: "drink" },
-  { id: "photobooth", name: "Photo Booth", slug: "photo-booth", blurb: "Add a session to your order", icon: "photo" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -163,19 +162,6 @@ export const OPTION_GROUPS: OptionGroup[] = [
       { id: "drink-yuzu", name: "Yuzu sparkling", priceDelta: 0 },
       { id: "drink-barley", name: "Iced barley tea", priceDelta: 0 },
       { id: "drink-milkis", name: "Milkis soda", priceDelta: 150 },
-    ],
-  },
-  {
-    id: "prints",
-    name: "Print copies",
-    helper: "Choose 1",
-    minSelect: 1,
-    maxSelect: 1,
-    required: true,
-    choices: [
-      { id: "print-1", name: "1 strip", priceDelta: 0 },
-      { id: "print-2", name: "2 strips", priceDelta: 100 },
-      { id: "print-4", name: "4 strips", priceDelta: 250 },
     ],
   },
 ];
@@ -601,46 +587,6 @@ export const PRODUCTS: Product[] = [
     availability: A("available", "available"),
     kcal: 220,
   },
-  {
-    id: "p-booth-session",
-    slug: "photo-booth-session",
-    categoryId: "photobooth",
-    name: "Photo Booth Session",
-    description: "From RM1. Add it now, use it after your meal.",
-    longDescription:
-      "One photo booth session at the branch you are ordering from. Add it to your order and show the receipt at the booth. Sessions from RM1, extra strips priced below.",
-    price: 100,
-    image: "/images/food/photo-booth-session.jpg",
-    tags: ["From RM1", "MAKE IT LAST"],
-    spiceLevel: 0,
-    allergens: [],
-    muslimFriendly: true,
-    popular: true,
-    signature: false,
-    optionGroupIds: ["prints"],
-    availability: A("available", "available"),
-    kcal: 0,
-  },
-  {
-    id: "p-booth-frame",
-    slug: "photo-strip-frame",
-    categoryId: "photobooth",
-    name: "Photo Strip Frame",
-    description: "Take the strip home in a card frame.",
-    longDescription:
-      "A printed card frame for your photo strip, in cream or teal. Collect it at the counter with your order.",
-    price: 400,
-    image: "/images/food/photo-strip-frame.jpg",
-    tags: ["MAKE IT LAST"],
-    spiceLevel: 0,
-    allergens: [],
-    muslimFriendly: true,
-    popular: false,
-    signature: false,
-    optionGroupIds: [],
-    availability: A("available", "available"),
-    kcal: 0,
-  },
 ];
 
 export const productById = (id: string) => PRODUCTS.find((p) => p.id === id);
@@ -700,22 +646,6 @@ export const PROMOTIONS: Promotion[] = [
       "SS15 branch only.",
       "Delivery address must be within 8 km.",
       "Weekend orders only.",
-    ],
-  },
-  {
-    id: "promo-booth",
-    name: "Meal + Booth",
-    badge: "RM1 BOOTH",
-    description: "Add a photo booth session for RM1 with any set or platter.",
-    type: "bundle",
-    value: 100,
-    minSpend: 1700,
-    branchIds: ["ss15", "taylors"],
-    endsOn: "2026-12-31",
-    terms: [
-      "One RM1 session per order.",
-      "Session must be used on the same day at the same branch.",
-      "Extra print strips charged separately.",
     ],
   },
 ];
@@ -1069,7 +999,7 @@ export const MOCK_ORDERS: Order[] = [
     isGuest: false,
     branchId: "taylors",
     fulfilment: "pickup",
-    lines: [line("p-set-soy", 1, SET_SOY), line("p-booth-session", 1)],
+    lines: [line("p-set-soy", 1, SET_SOY), line("p-yuzu", 1)],
     subtotal: 1990,
     discount: 500,
     deliveryFee: 0,
@@ -1089,7 +1019,7 @@ export const MOCK_ORDERS: Order[] = [
       refundReference: "OXP-RF-1180",
       refundRequestedAt: "2026-09-18T13:02:00+08:00",
       refundCompletedAt: "2026-09-19T10:14:00+08:00",
-      refundNote: "Partial refund for the photo booth session — booth was under maintenance.",
+      refundNote: "Partial refund for an unavailable drink.",
     },
     events: [
       { status: "PAID", label: "Payment received · OXPay", at: "12:40", actor: "system" },
@@ -1270,7 +1200,6 @@ export const DASHBOARD = {
     { name: "Yangnyeom Set", units: 28, revenue: 54600 },
     { name: "Cheese Tteokbokki", units: 24, revenue: 33600 },
     { name: "Mozzarella Corn Dog", units: 22, revenue: 18700 },
-    { name: "Photo Booth Session", units: 19, revenue: 3800 },
   ],
 };
 

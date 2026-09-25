@@ -150,7 +150,7 @@ export function ProductCard({
             </span>
           )}
         </div>
-        <p className="mt-1 line-clamp-2 flex-1 text-[13px] leading-snug text-grey">
+        <p className="mt-1 line-clamp-1 flex-1 text-[13px] leading-snug text-grey">
           {product.description}
         </p>
 

@@ -159,7 +159,7 @@ export function AccountOverview() {
       <div className="container-page py-10 lg:py-14">
         <AccountHeader
           title="MY ACCOUNT"
-          lead="Your profile, your addresses, your receipts and your photo booth stamps."
+          lead="Your profile, addresses, receipts and saved orders."
         />
         <AccountSkeleton rows={4} />
       </div>
@@ -171,7 +171,7 @@ export function AccountOverview() {
       <div className="container-page py-10 lg:py-14">
         <AccountHeader
           title="MY ACCOUNT"
-          lead="Sign in to see your saved addresses, your receipts and your photo booth stamps."
+          lead="Sign in to see your saved addresses, receipts and orders."
         />
         <AccountSignedOut body="Your profile, addresses and order history live behind a sign-in. Nothing is lost — sign in and everything is where you left it." />
       </div>
@@ -435,15 +435,14 @@ export function AccountOverview() {
                   Make it last
                 </p>
                 <h2 id="loyalty-title" className="mt-1.5 font-display text-[22px] font-extrabold text-white">
-                  PHOTO BOOTH STAMP CARD
+                  MEMBER VISIT CARD
                 </h2>
               </div>
               <PhotoStrip frames={3} tilt={6} className="w-14" label="A photo booth strip" />
             </div>
 
             <p className="mt-3 max-w-[38ch] text-[14px] leading-relaxed text-cream/80">
-              One stamp for every order you collect or receive. Ten stamps earns a free photo booth
-              session with two printed strips.
+              One stamp for every completed order. Your visits and member benefits stay together.
             </p>
 
             <ol
@@ -482,7 +481,7 @@ export function AccountOverview() {
             </p>
             <div className="mt-5">
               <ButtonLink href="/photo-booth" variant="secondary" size="md">
-                How the booth works
+                See our outlet experience
               </ButtonLink>
             </div>
           </div>

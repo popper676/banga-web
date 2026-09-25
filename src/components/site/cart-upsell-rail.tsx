@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * "Goes well with this" — sides, drinks and a booth session that are in stock
+ * "Goes well with this" — sides and drinks that are in stock
  * at the selected branch and not already in the bag.
  */
 
@@ -10,7 +10,7 @@ import { useStore } from "@/lib/store";
 import type { Product } from "@/lib/types";
 import { ProductCard } from "@/components/site/product-card";
 
-const COMPANION_CATEGORIES = ["sides", "drinks", "photobooth"];
+const COMPANION_CATEGORIES = ["sides", "drinks"];
 
 export function CartUpsellRail() {
   const { branchId, lines } = useStore();
@@ -35,7 +35,7 @@ export function CartUpsellRail() {
         Goes well with this
       </h2>
       <p className="mt-1 text-[14px] leading-relaxed text-grey">
-        Sides, drinks and a photo booth session — all in stock at {branch.shortName} today.
+        Sides and drinks available at {branch.shortName} today.
       </p>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {picks.map((product) => (

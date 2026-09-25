@@ -42,8 +42,7 @@ export default async function BranchPage({ params }: { params: Promise<{ branch:
   const status = branchStatus(branch);
   const soldOut = PRODUCTS.filter((p) => p.availability[branch.id] === "sold_out");
   const lowStock = PRODUCTS.filter((p) => p.availability[branch.id] === "low");
-  const boothProducts = PRODUCTS.filter((p) => p.categoryId === "photobooth");
-  const boothAvailable = boothProducts.some((p) => p.availability[branch.id] !== "sold_out");
+  const boothAvailable = true;
   const jsDay = new Date().getDay();
   const todayIndex = jsDay === 0 ? 7 : jsDay;
 
@@ -229,7 +228,7 @@ export default async function BranchPage({ params }: { params: Promise<{ branch:
                 <li className="flex items-center gap-2.5">
                   <Icon name={boothAvailable ? "camera" : "cross"} size={17} />
                   <span className={boothAvailable ? "text-ink" : "text-grey"}>
-                    Photo booth {boothAvailable ? "available · sessions from RM1" : "out of service today"}
+                    Photo booth {boothAvailable ? "available inside this outlet" : "out of service today"}
                   </span>
                 </li>
               </ul>
