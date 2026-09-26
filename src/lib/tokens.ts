@@ -8,18 +8,18 @@
 
 export const color = {
   teal: "#FEB513",
-  deep: "#000000",
-  ink: "#000000",
-  cream: "#FFFFFF",
+  deep: "#1C1408",
+  ink: "#14110C",
+  cream: "#F6F1E7",
   coral: "#F2B326",
-  cta: "#000000",
-  ctaDark: "#F2B326",
+  cta: "#14110C",
+  ctaDark: "#3A2A10",
   yellow: "#FEB513",
-  mint: "#FFFFFF",
-  white: "#FFFFFF",
-  grey: "#000000",
-  line: "#000000",
-  lineDark: "#FEB513",
+  mint: "#FFF4D6",
+  white: "#FFFcf7",
+  grey: "#6E655C",
+  line: "#E4D9C4",
+  lineDark: "#3A2E18",
 } as const;
 
 export const colorRoles = [

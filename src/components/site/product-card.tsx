@@ -150,10 +150,6 @@ export function ProductCard({
             </span>
           )}
         </div>
-        <p className="mt-1 line-clamp-1 flex-1 text-[13px] leading-snug text-grey">
-          {product.description}
-        </p>
-
         <div className="mt-3 flex items-end justify-between gap-2">
           <div>
             <Price sen={discounted ?? product.price} original={discounted ? product.price : undefined} />

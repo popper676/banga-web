@@ -12,6 +12,47 @@ import { Icon } from "./icons";
 
 export const AVAILABLE_ASSETS = new Set<string>();
 
+/** Editorial food photography used until a brand shoot exists. */
+const PHOTO_LIBRARY: Record<string, string> = {
+  "/images/food/soy-garlic-boneless.jpg":
+    "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1400&q=80",
+  "/images/food/original-boneless.jpg":
+    "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=1400&q=80",
+  "/images/food/spicy-boneless.jpg":
+    "https://images.unsplash.com/photo-1575932444877-5106bee2a599?auto=format&fit=crop&w=1400&q=80",
+  "/images/food/honey-butter.jpg":
+    "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1400&q=80",
+  "/images/food/tteokbokki.jpg":
+    "https://images.unsplash.com/photo-1635363638580-c2809d049eee?auto=format&fit=crop&w=1400&q=80",
+  "/images/food/kimbap.jpg":
+    "https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=1400&q=80",
+  "/images/food/ramen.jpg":
+    "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1400&q=80",
+  "/images/lifestyle/students.jpg":
+    "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=80",
+  "/images/lifestyle/friends.jpg":
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80",
+  "/images/lifestyle/family.jpg":
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80",
+  "/images/lifestyle/counter.jpg":
+    "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=80",
+  "/images/brand/founders.jpg":
+    "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80",
+};
+
+function photoFor(src: string): string | undefined {
+  if (PHOTO_LIBRARY[src]) return PHOTO_LIBRARY[src];
+  if (src.includes("chicken") || src.includes("boneless")) return PHOTO_LIBRARY["/images/food/soy-garlic-boneless.jpg"];
+  if (src.includes("tteok") || src.includes("rice") || src.includes("set")) return PHOTO_LIBRARY["/images/food/tteokbokki.jpg"];
+  if (src.includes("drink") || src.includes("soda") || src.includes("tea")) {
+    return "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1400&q=80";
+  }
+  if (src.includes("lifestyle") || src.includes("branch") || src.includes("booth")) {
+    return PHOTO_LIBRARY["/images/lifestyle/friends.jpg"];
+  }
+  return PHOTO_LIBRARY["/images/food/original-boneless.jpg"];
+}
+
 const PALETTES = [
   { bg: "#FFFFFF", shape: "#FEB513", accent: "#000000" },
   { bg: "#FEB513", shape: "#FFFFFF", accent: "#000000" },
@@ -41,9 +82,10 @@ export function FoodImage({
   rounded?: string;
   variant?: "dish" | "scene" | "portrait";
 }) {
-  if (AVAILABLE_ASSETS.has(src)) {
+  const photo = photoFor(src);
+  if (photo) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src} alt={alt} loading="lazy" className={cn("object-cover", rounded, className)} />;
+    return <img src={photo} alt={alt} loading="lazy" className={cn("size-full object-cover", rounded, className)} />;
   }
 
   const p = PALETTES[hash(src) % PALETTES.length];

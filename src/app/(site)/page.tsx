@@ -48,9 +48,8 @@ export default function HomePage() {
               overline="Our story"
               title={<span id="story-title">TRADITION &amp; TRENDY</span>}
             />
-            <p className="mt-6 max-w-[48ch] text-[17px] leading-relaxed text-ink/80">
-              Korean comfort food made in Malaysia by a Korean couple—bold flavours, boneless
-              chicken and easy everyday prices.
+            <p className="mt-6 max-w-[36ch] text-[17px] leading-relaxed text-ink/80">
+              Korean comfort food. Boneless chicken. Everyday prices.
             </p>
             <ButtonLink href="/story" variant="secondary" className={`${styles.buttonOnWhite} mt-7`} iconEnd="arrowRight">
               Read our story

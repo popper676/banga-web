@@ -1,7 +1,8 @@
 .duotone {
-  --banga-black: #000000;
-  --banga-white: #ffffff;
+  --banga-black: #0e0c09;
+  --banga-white: #f6f1e7;
   --banga-teal: #feb513;
+  --banga-cream: #f7f3ea;
   background: var(--banga-black);
 }
 
@@ -35,12 +36,18 @@
 }
 
 .blackSurface :global(.text-ink),
-.blackSurface :global(.text-grey),
 .blackSurface :global(.text-deep),
-.blackSurface :global(.text-teal),
-.blackSurface :global(.text-cta),
 .blackSurface :global(.text-white),
 .blackSurface :global(.text-cream) {
+  color: var(--banga-cream) !important;
+}
+
+.blackSurface :global(.text-grey) {
+  color: rgb(247 243 234 / 0.62) !important;
+}
+
+.blackSurface :global(.text-teal),
+.blackSurface :global(.text-cta) {
   color: var(--banga-teal) !important;
 }
 
@@ -103,7 +110,7 @@
 .blackSurface *,
 .blackSurface *::before,
 .blackSurface *::after {
-  border-color: rgba(110, 199, 206, 0.42);
+  border-color: rgb(254 181 19 / 0.28);
 }
 
 .buttonOnWhite,
@@ -112,7 +119,7 @@
   border-color: var(--banga-black) !important;
   background: var(--banga-black) !important;
   color: var(--banga-teal) !important;
-  box-shadow: 4px 4px 0 var(--banga-teal);
+  box-shadow: none;
 }
 
 .buttonOnWhite:hover,
@@ -120,8 +127,8 @@
 .tealSurface .buttonOnTeal:hover {
   background: var(--banga-teal) !important;
   color: var(--banga-black) !important;
-  box-shadow: 0 0 0 var(--banga-teal);
-  transform: translate(3px, 3px);
+  box-shadow: none;
+  transform: none;
 }
 
 .buttonOnTeal {
@@ -158,11 +165,11 @@
 }
 
 .storyVisual {
-  margin-right: 14px;
-  border: 2px solid var(--banga-black);
-  background: var(--banga-black);
-  padding: 9px;
-  box-shadow: 14px 14px 0 var(--banga-teal);
+  margin-right: 0;
+  border: 1px solid rgb(20 17 12 / 0.12);
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
 }
 
 .visualIndex {
@@ -184,11 +191,7 @@
 }
 
 .momentsSection::after {
-  position: absolute;
-  inset: 0 0 0 auto;
-  width: min(22vw, 320px);
-  background: var(--banga-teal);
-  content: "";
+  content: none;
 }
 
 .momentsSection > :global(.container-page) {
@@ -200,11 +203,11 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: minmax(185px, 1fr);
-  gap: 8px;
-  border: 2px solid var(--banga-black);
-  background: var(--banga-black);
-  padding: 8px;
-  box-shadow: 14px 14px 0 var(--banga-teal);
+  gap: 12px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
 }
 
 .momentCard {
@@ -257,14 +260,14 @@
 .productGrid > :global(a) {
   border-color: var(--banga-teal) !important;
   background: var(--banga-white) !important;
-  box-shadow: 0 6px 0 var(--banga-teal);
+  box-shadow: none;
   color: var(--banga-black) !important;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .productGrid > :global(a:hover) {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 0 var(--banga-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgb(20 17 12 / 0.08);
 }
 
 .productGrid > :global(a) :global(.text-ink),
